@@ -17,6 +17,7 @@ export const StyledResultItem = styled.div`
   margin: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
   flex-direction: column;
+  overflow: hidden;
 `;
 
 export const StyledFontPreview = styled.p`
