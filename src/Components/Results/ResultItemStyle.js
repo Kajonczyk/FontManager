@@ -21,6 +21,12 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledInput = styled.textarea`
+  @font-face {
+    font-family: ${({ fontFamily }) => fontFamily};
+    src: ${({ fontSource }) => `url('${fontSource}') format('truetype')`};
+  }
+  font-family: ${({ fontFamily }) => fontFamily};
+  font-size: ${({ theme }) => theme.font.size.m};
   border: 0px;
   width: 80%;
   height: 50%;
