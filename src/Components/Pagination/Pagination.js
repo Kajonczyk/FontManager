@@ -1,5 +1,9 @@
 import React from "react";
-import { PaginationWrapper, PaginationItem } from "./PaginationStyles";
+import {
+  PaginationWrapper,
+  PaginationItem,
+  StyledList,
+} from "./PaginationStyles";
 export const Pagination = ({
   items,
   itemsPerPage,
@@ -15,63 +19,68 @@ export const Pagination = ({
 
   return (
     <PaginationWrapper>
-      {(() => {
-        if (currentPage < THRESHOLD) {
-          return [
-            pageNumbers.splice(0, 5).map((number) => (
+      <StyledList>
+        {(() => {
+          if (currentPage < THRESHOLD) {
+            return [
+              pageNumbers.splice(0, 5).map((number) => (
+                <PaginationItem
+                  key={number}
+                  onClick={() => changePage(number)}
+                  numActive={number}
+                >
+                  {number}
+                </PaginationItem>
+              )),
+              <PaginationItem>...</PaginationItem>,
               <PaginationItem
-                key={number}
-                onClick={() => changePage(number)}
-                numActive={number}
+                onClick={() => changePage(pageNumbers[pageNumbers.length - 1])}
               >
-                {number}
-              </PaginationItem>
-            )),
-            <PaginationItem>...</PaginationItem>,
-            <PaginationItem
-              onClick={() => changePage(pageNumbers[pageNumbers.length - 1])}
-            >
-              {Number(pageNumbers[pageNumbers.length - 1])}
-            </PaginationItem>,
-          ];
-        } else if (currentPage >= THRESHOLD && currentPage < itemsLength - 3) {
-          return [
-            <PaginationItem onClick={() => changePage(1)}>1</PaginationItem>,
+                {Number(pageNumbers[pageNumbers.length - 1])}
+              </PaginationItem>,
+            ];
+          } else if (
+            currentPage >= THRESHOLD &&
+            currentPage < itemsLength - 3
+          ) {
+            return [
+              <PaginationItem onClick={() => changePage(1)}>1</PaginationItem>,
 
-            <PaginationItem>...</PaginationItem>,
+              <PaginationItem>...</PaginationItem>,
 
-            pageNumbers.splice(currentPage - 3, 5).map((number) => (
-              <PaginationItem
-                key={number}
-                onClick={() => changePage(number)}
-                numActive={number}
-              >
-                {number}
-              </PaginationItem>
-            )),
-            <PaginationItem>...</PaginationItem>,
-            <PaginationItem onClick={() => changePage(itemsLength - 1)}>
-              {Number(itemsLength - 1)}
-            </PaginationItem>,
-          ];
-        } else {
-          return [
-            <PaginationItem onClick={() => changePage(1)}>1</PaginationItem>,
+              pageNumbers.splice(currentPage - 3, 5).map((number) => (
+                <PaginationItem
+                  key={number}
+                  onClick={() => changePage(number)}
+                  numActive={number}
+                >
+                  {number}
+                </PaginationItem>
+              )),
+              <PaginationItem>...</PaginationItem>,
+              <PaginationItem onClick={() => changePage(itemsLength - 1)}>
+                {Number(itemsLength - 1)}
+              </PaginationItem>,
+            ];
+          } else {
+            return [
+              <PaginationItem onClick={() => changePage(1)}>1</PaginationItem>,
 
-            <PaginationItem>...</PaginationItem>,
+              <PaginationItem>...</PaginationItem>,
 
-            pageNumbers.splice(currentPage - 4, 6).map((number) => (
-              <PaginationItem
-                key={number}
-                onClick={() => changePage(number)}
-                numActive={number}
-              >
-                {number}
-              </PaginationItem>
-            )),
-          ];
-        }
-      })()}
+              pageNumbers.splice(currentPage - 4, 6).map((number) => (
+                <PaginationItem
+                  key={number}
+                  onClick={() => changePage(number)}
+                  numActive={number}
+                >
+                  {number}
+                </PaginationItem>
+              )),
+            ];
+          }
+        })()}
+      </StyledList>
     </PaginationWrapper>
   );
 };

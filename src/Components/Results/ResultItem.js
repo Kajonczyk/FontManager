@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   StyledWrapper,
   StyledInput,
@@ -7,11 +7,19 @@ import {
 } from "./ResultItemStyle";
 import { StyledFontPreview, StyledFontName } from "./ResultsStyles";
 export const ResultItem = ({ itemData, setItemData }) => {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   return (
     <StyledWrapper>
       <StyledFontPreview fontFamily={itemData.fontFamily}>Aa</StyledFontPreview>
-      <StyledFontName fontFamily={itemData.fontFamily}>Name</StyledFontName>
+      <StyledFontName fontFamily={itemData.fontFamily}>
+        {itemData.fontFamily}
+      </StyledFontName>
       <StyledInput
+        ref={inputRef}
         placeholder="Type your text here.."
         fontFamily={itemData.fontFamily}
         fontSource={itemData.fontSource}

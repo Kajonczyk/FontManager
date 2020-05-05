@@ -29,8 +29,12 @@ export const StyledFontPreview = styled.p`
   font-size: ${({ theme }) => theme.font.size.l};
   font-family: ${({ fontFamily }) => fontFamily};
 `;
-export const StyledFontName = styled.p`
+
+export const StyledFontName = styled.p.attrs((props) => ({
+  style: {
+    fontFamily: props.fontFamily,
+  },
+}))`
   font-size: ${({ theme }) => theme.font.size.s};
-  font-family: ${({ fontFamily }) => fontFamily};
   text-align: center;
 `;

@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const PaginationWrapper = styled.div`
+export const PaginationWrapper = styled.nav`
   display: flex;
   justify-content: center;
   margin: 20px 0px;
 `;
-export const PaginationItem = styled.div`
+export const StyledList = styled.ul`
+  list-style: none;
+  display: inherit;
+`;
+export const PaginationItem = styled.li`
   height: 30px;
   width: 30px;
   border: 1px solid orange;
@@ -13,4 +17,6 @@ export const PaginationItem = styled.div`
   line-height: 20px;
   text-align: center;
   margin: 0px 1px;
+  cursor: pointer;
+  border-radius: 50px;
 `;

@@ -1,7 +1,6 @@
 import React from "react";
 import { StyledNavbar, StyledLogoText, StyledDiv } from "./NavbarStyles";
 import { ReactComponent as Logo } from "./Logo.svg";
-import { MobileMenu } from "../MobileMenu/MobileMenu";
 export const Navbar = () => {
   return (
     <div>
@@ -10,7 +9,6 @@ export const Navbar = () => {
           <Logo />
           <StyledLogoText>FontManager</StyledLogoText>
         </StyledDiv>
-        <MobileMenu />
       </StyledNavbar>
     </div>
   );

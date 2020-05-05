@@ -48,6 +48,7 @@ export const StyledCrossWrapper = styled.div`
   height: 30px;
   ${flexProperties};
   justify-content: space-evenly;
+  cursor: pointer;
 `;
 
 export const StyledLine = styled.div`

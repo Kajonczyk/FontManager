@@ -13,7 +13,7 @@ import { ResultItem } from "./ResultItem";
 export const Results = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(30);
+  const [itemsPerPage] = useState(calculateItemsPerPage());
   const [itemData, setItemData] = useState({
     fontFamily: "",
     fontSource: "",
@@ -26,11 +26,22 @@ export const Results = () => {
     }
     fetchData();
   }, []);
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentPosts = data.slice(indexOfFirstItem, indexOfLastItem);
 
   const changePage = (pageNumber) => setCurrentPage(pageNumber);
+
+  function calculateItemsPerPage() {
+    if (window.innerWidth < 768) {
+      return 40;
+    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+      return 70;
+    } else if (window.innerWidth >= 1024) {
+      return 100;
+    }
+  }
 
   return (
     <div>

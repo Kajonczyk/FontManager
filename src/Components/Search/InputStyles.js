@@ -9,4 +9,7 @@ export const StyledInput = styled.input`
   height: 45px;
   width: 80%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+  ${({ theme }) => theme.mq.tablet} {
+    max-width: 768px;
+  }
 `;
