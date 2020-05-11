@@ -18,6 +18,7 @@ export const StyledResultItem = styled.div`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
   flex-direction: column;
   overflow: hidden;
+  cursor: pointer;
 `;
 
 export const StyledFontPreview = styled.p`
@@ -28,8 +29,12 @@ export const StyledFontPreview = styled.p`
   font-size: ${({ theme }) => theme.font.size.l};
   font-family: ${({ fontFamily }) => fontFamily};
 `;
-export const StyledFontName = styled.p`
+
+export const StyledFontName = styled.p.attrs((props) => ({
+  style: {
+    fontFamily: props.fontFamily,
+  },
+}))`
   font-size: ${({ theme }) => theme.font.size.s};
-  font-family: ${({ fontFamily }) => fontFamily};
   text-align: center;
 `;

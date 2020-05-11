@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   StyledWrapper,
   StyledInput,
@@ -6,13 +6,32 @@ import {
   StyledLine,
 } from "./ResultItemStyle";
 import { StyledFontPreview, StyledFontName } from "./ResultsStyles";
-export const ResultItem = () => {
+export const ResultItem = ({ itemData, setItemData }) => {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   return (
     <StyledWrapper>
-      <StyledFontPreview>Aa</StyledFontPreview>
-      <StyledFontName>Name</StyledFontName>
-      <StyledInput placeholder="Type your text here.." />
-      <StyledCrossWrapper>
+      <StyledFontPreview fontFamily={itemData.fontFamily}>Aa</StyledFontPreview>
+      <StyledFontName fontFamily={itemData.fontFamily}>
+        {itemData.fontFamily}
+      </StyledFontName>
+      <StyledInput
+        ref={inputRef}
+        placeholder="Type your text here.."
+        fontFamily={itemData.fontFamily}
+        fontSource={itemData.fontSource}
+      />
+      <StyledCrossWrapper
+        onClick={() =>
+          setItemData({
+            fontFamily: "",
+            fontSource: "",
+          })
+        }
+      >
         <StyledLine /> <StyledLine />
       </StyledCrossWrapper>
     </StyledWrapper>

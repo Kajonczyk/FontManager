@@ -12,4 +12,7 @@ export const theme = {
       Raleway: "'Raleway', sans-serif;",
     },
   },
+  mq: {
+    tablet: "@media (min-width: 768px)",
+  },
 };
