@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/fontmanager/static/js/main.1e21fcba.chunk.js",
+    "main.js.map": "/fontmanager/static/js/main.1e21fcba.chunk.js.map",
+    "runtime-main.js": "/fontmanager/static/js/runtime-main.428773aa.js",
+    "runtime-main.js.map": "/fontmanager/static/js/runtime-main.428773aa.js.map",
+    "static/js/2.e185b33e.chunk.js": "/fontmanager/static/js/2.e185b33e.chunk.js",
+    "static/js/2.e185b33e.chunk.js.map": "/fontmanager/static/js/2.e185b33e.chunk.js.map",
+    "index.html": "/fontmanager/index.html",
+    "precache-manifest.1de03b57576a1cfae882cc8eab7d0a48.js": "/fontmanager/precache-manifest.1de03b57576a1cfae882cc8eab7d0a48.js",
+    "service-worker.js": "/fontmanager/service-worker.js",
+    "static/js/2.e185b33e.chunk.js.LICENSE.txt": "/fontmanager/static/js/2.e185b33e.chunk.js.LICENSE.txt",
+    "static/media/Logo.ab314935.svg": "/fontmanager/static/media/Logo.ab314935.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.428773aa.js",
+    "static/js/2.e185b33e.chunk.js",
+    "static/js/main.1e21fcba.chunk.js"
+  ]
+}
