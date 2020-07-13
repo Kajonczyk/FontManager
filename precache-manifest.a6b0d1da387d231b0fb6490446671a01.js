@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87c84230d3a56d4ddc6e1f4c87f44d5d",
+    "revision": "4fa942746b2bad3449bfeda6851dea91",
     "url": "/FontManager/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/FontManager/static/js/2.f93b4dc1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6f7ca55b136e71b4c831",
-    "url": "/FontManager/static/js/main.3ec0a400.chunk.js"
+    "revision": "70c252777ee49bcd616d",
+    "url": "/FontManager/static/js/main.1e21fcba.chunk.js"
   },
   {
     "revision": "8ace7babf2555ae1a224",
