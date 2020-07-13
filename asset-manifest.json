@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/FontManager/static/js/main.1e21fcba.chunk.js",
-    "main.js.map": "/FontManager/static/js/main.1e21fcba.chunk.js.map",
+    "main.js": "/FontManager/static/js/main.3ec0a400.chunk.js",
+    "main.js.map": "/FontManager/static/js/main.3ec0a400.chunk.js.map",
     "runtime-main.js": "/FontManager/static/js/runtime-main.072b2304.js",
     "runtime-main.js.map": "/FontManager/static/js/runtime-main.072b2304.js.map",
     "static/js/2.f93b4dc1.chunk.js": "/FontManager/static/js/2.f93b4dc1.chunk.js",
     "static/js/2.f93b4dc1.chunk.js.map": "/FontManager/static/js/2.f93b4dc1.chunk.js.map",
     "index.html": "/FontManager/index.html",
-    "precache-manifest.8589c70b8383ab824c983482683dbdea.js": "/FontManager/precache-manifest.8589c70b8383ab824c983482683dbdea.js",
+    "precache-manifest.f52c52b47fd7428c4f36706c295230fb.js": "/FontManager/precache-manifest.f52c52b47fd7428c4f36706c295230fb.js",
     "service-worker.js": "/FontManager/service-worker.js",
     "static/js/2.f93b4dc1.chunk.js.LICENSE.txt": "/FontManager/static/js/2.f93b4dc1.chunk.js.LICENSE.txt",
     "static/media/Logo.ab314935.svg": "/FontManager/static/media/Logo.ab314935.svg"
@@ -15,6 +15,6 @@
   "entrypoints": [
     "static/js/runtime-main.072b2304.js",
     "static/js/2.f93b4dc1.chunk.js",
-    "static/js/main.1e21fcba.chunk.js"
+    "static/js/main.3ec0a400.chunk.js"
   ]
 }
